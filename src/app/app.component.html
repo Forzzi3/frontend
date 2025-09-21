@@ -1,10 +1,15 @@
-<h1>Frontend 1.0</h1>
+<h1>Frontend 2.0</h1>
 
 <div>
   <input [(ngModel)]="text" placeholder="Введите текст" />
   <button (click)="send()">Отправить</button>
+  <p>{{ response }}</p>
 </div>
 
-<p>{{ response }}</p>
+<div>
+  <button (click)="read()">Прочитать данные</button>
+  <textarea [value]="readResult" readonly></textarea>
+  <p>{{ readError }}</p>
+</div>
 
 <router-outlet></router-outlet>
